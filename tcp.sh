@@ -339,17 +339,17 @@ echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
   
  ${Green_font_prefix}0.${Font_color_suffix} 升级脚本
 ————————————内核管理————————————
- ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR/BBR魔改版内核
- ${Green_font_prefix}2.${Font_color_suffix} 安装 BBRplus版内核 
+ ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR/BBR魔改版内核222
+ ${Green_font_prefix}2.${Font_color_suffix} 安装 BBRplus版内核 2222
  ${Green_font_prefix}3.${Font_color_suffix} 安装 Lotserver(锐速)内核
 ————————————加速管理————————————
  ${Green_font_prefix}4.${Font_color_suffix} 使用BBR加速
- ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速
+ ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速222
  ${Green_font_prefix}6.${Font_color_suffix} 使用暴力BBR魔改版加速(不支持部分系统)
  ${Green_font_prefix}7.${Font_color_suffix} 使用BBRplus版加速
  ${Green_font_prefix}8.${Font_color_suffix} 使用Lotserver(锐速)加速
 ————————————杂项管理————————————
- ${Green_font_prefix}9.${Font_color_suffix} 卸载全部加速
+ ${Green_font_prefix}9.${Font_color_suffix} 卸载全部加速222
  ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
  ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
 ————————————————————————————————" && echo
