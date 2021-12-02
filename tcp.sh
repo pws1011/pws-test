@@ -359,7 +359,7 @@ echo && echo -e " BBR加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
 		
 	fi
 echo
-read -p " 请输入数字 [0-9]:" num
+read -p " 请输入数字 [0-11]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -394,7 +394,7 @@ case "$num" in
 	;;
 	*)
 	clear
-	echo -e "${Error}:请输入正确数字 [0-9]"
+	echo -e "${Error}:请输入正确数字 [0-11]"
 	sleep 5s
 	start_menu
 	;;
