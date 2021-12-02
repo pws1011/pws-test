@@ -370,26 +370,26 @@ case "$num" in
 	2)
 	check_sys_bbrplus
 	;;
-	3)
+	4)
 	startbbr
 	;;
-	4)
+	5)
 	startbbrmod
 	;;
-	5)
+	6)
 	startbbrmod_nanqinlang
 	;;
-	6)
+	7)
 	startbbrplus
 	;;
 	
-	7)
+	9)
 	remove_all
 	;;
-	8)
+	10)
 	optimizing_system
 	;;
-	9)
+	11)
 	exit 1
 	;;
 	*)
@@ -639,9 +639,9 @@ check_status(){
 		elif [[ ${run_status} == "nanqinlang" ]]; then
 			run_status=`lsmod | grep "nanqinlang" | awk '{print $1}'`
 			if [[ ${run_status} == "tcp_nanqinlang" ]]; then
-				run_status="暴力BBR魔改版启动成功"
+				run_status="暴力BBR-GC魔改版启动成功"
 			else 
-				run_status="暴力BBR魔改版启动失败"
+				run_status="暴力BBR-GC魔改版启动失败"
 			fi
 		else 
 			run_status="未安装加速模块"
