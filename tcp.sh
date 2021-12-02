@@ -341,14 +341,14 @@ echo && echo -e " BBR加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
  ${Green_font_prefix}2.${Font_color_suffix} 安装 BBR-ACW版内核 
 
 ————————————加速管理————————————
- ${Green_font_prefix}4.${Font_color_suffix} 使用BBR
- ${Green_font_prefix}5.${Font_color_suffix} 使用BBR-ACW
- ${Green_font_prefix}6.${Font_color_suffix} 使用BBR-GC
-
+ ${Green_font_prefix}3.${Font_color_suffix} 使用BBR
+ ${Green_font_prefix}4.${Font_color_suffix} 使用BBR-GC
+ ${Green_font_prefix}5.${Font_color_suffix} 使用BBR-GC2
+ ${Green_font_prefix}6.${Font_color_suffix} 使用BBR-ACW
 ————————————杂项管理————————————
- ${Green_font_prefix}9.${Font_color_suffix} 卸载全部加速
- ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
- ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
+ ${Green_font_prefix}7.${Font_color_suffix} 卸载全部加速
+ ${Green_font_prefix}8.${Font_color_suffix} 系统配置优化
+ ${Green_font_prefix}9.${Font_color_suffix} 退出脚本
 ————————————————————————————————" && echo
 
 	check_status
@@ -370,31 +370,31 @@ case "$num" in
 	2)
 	check_sys_bbrplus
 	;;
-	4)
+	3)
 	startbbr
 	;;
-	5)
+	4)
 	startbbrmod
 	;;
-	6)
+	5)
 	startbbrmod_nanqinlang
 	;;
-	7)
+	6)
 	startbbrplus
 	;;
 	
-	9)
+	7)
 	remove_all
 	;;
-	10)
+	8)
 	optimizing_system
 	;;
-	11)
+	9)
 	exit 1
 	;;
 	*)
 	clear
-	echo -e "${Error}:请输入正确数字 [0-11]"
+	echo -e "${Error}:请输入正确数字 [0-9]"
 	sleep 5s
 	start_menu
 	;;
