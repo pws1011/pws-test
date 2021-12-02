@@ -333,19 +333,18 @@ Update_Shell(){
 #开始菜单
 start_menu(){
 clear
-echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
-  -- 就是爱生活 | 94ish.me --
+echo && echo -e " BBR加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   
  ${Green_font_prefix}0.${Font_color_suffix} 升级脚本
 ————————————内核管理————————————
  ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR/BBR-GC内核
  ${Green_font_prefix}2.${Font_color_suffix} 安装 BBR-ACW版内核 
- #${Green_font_prefix}3.${Font_color_suffix} 安装 Lotserver(锐速)内核
+
 ————————————加速管理————————————
  ${Green_font_prefix}4.${Font_color_suffix} 使用BBR
  ${Green_font_prefix}5.${Font_color_suffix} 使用BBR-ACW
  ${Green_font_prefix}6.${Font_color_suffix} 使用BBR-GC
-# ${Green_font_prefix}8.${Font_color_suffix} 使用Lotserver(锐速)加速
+
 ————————————杂项管理————————————
  ${Green_font_prefix}9.${Font_color_suffix} 卸载全部加速
  ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
@@ -371,9 +370,6 @@ case "$num" in
 	2)
 	check_sys_bbrplus
 	;;
-	#3)
-	#check_sys_Lotsever
-	#;;
 	3)
 	startbbr
 	;;
@@ -386,9 +382,7 @@ case "$num" in
 	6)
 	startbbrplus
 	;;
-	#7)
-	#startlotserver
-	#;;
+	
 	7)
 	remove_all
 	;;
