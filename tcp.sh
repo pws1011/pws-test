@@ -112,16 +112,16 @@ startbbr(){
 	echo -e "${Info}BBR启动成功！"
 }
 
-#启用BBR-ACW
+#启用BBR-ACW/BBR-GC
 startbbrplus(){
 	remove_all
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-	echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf
+	echo "net.ipv4.tcp_congestion_control=BBR-GC" >> /etc/sysctl.conf
 	sysctl -p
-	echo -e "${Info}BBR-ACW启动成功！"
+	echo -e "${Info}BBR-GC启动成功！"
 }
 
-#编译并启用BBR-GC
+#编译并启用BBR-GC/ACW
 startbbrmod(){
 	remove_all
 	if [[ "${release}" == "centos" ]]; then
@@ -155,13 +155,13 @@ startbbrmod(){
 	
 
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-	echo "net.ipv4.tcp_congestion_control=tsunami" >> /etc/sysctl.conf
+	echo "net.ipv4.tcp_congestion_control=BBR-ACW" >> /etc/sysctl.conf
 	sysctl -p
     cd .. && rm -rf bbrmod
-	echo -e "${Info}BBR-GC启动成功！"
+	echo -e "${Info}BBR-ACW启动成功！"
 }
 
-#编译并启用BBR-GC
+#编译并启用BBR-GC2
 startbbrmod_nanqinlang(){
 	remove_all
 	if [[ "${release}" == "centos" ]]; then
@@ -194,9 +194,9 @@ startbbrmod_nanqinlang(){
 	
 
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-	echo "net.ipv4.tcp_congestion_control=nanqinlang" >> /etc/sysctl.conf
+	echo "net.ipv4.tcp_congestion_control=BBR-GC2" >> /etc/sysctl.conf
 	sysctl -p
-	echo -e "${Info}BBR-GC启动成功！"
+	echo -e "${Info}BBR-GC2启动成功！"
 }
 
 #启用Lotserver
@@ -342,9 +342,9 @@ echo && echo -e " BBR加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
 
 ————————————加速管理————————————
  ${Green_font_prefix}3.${Font_color_suffix} 使用BBR
- ${Green_font_prefix}4.${Font_color_suffix} 使用BBR-GC
+ ${Green_font_prefix}4.${Font_color_suffix} 使用BBR-ACW
  ${Green_font_prefix}5.${Font_color_suffix} 使用BBR-GC2
- ${Green_font_prefix}6.${Font_color_suffix} 使用BBR-ACW
+ ${Green_font_prefix}6.${Font_color_suffix} 使用BBR-GC
 ————————————杂项管理————————————
  ${Green_font_prefix}7.${Font_color_suffix} 卸载全部加速
  ${Green_font_prefix}8.${Font_color_suffix} 系统配置优化
