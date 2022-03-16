@@ -116,7 +116,7 @@ startbbr(){
 startbbrplus(){
 	remove_all
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-	echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf
+	echo "net.ipv4.tcp_congestion_control=BBR-GC" >> /etc/sysctl.conf
 	sysctl -p
 	echo -e "${Info}BBR-GC启动成功！"
 }
@@ -155,7 +155,7 @@ startbbrmod(){
 	
 
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-	echo "net.ipv4.tcp_congestion_control=tsunami" >> /etc/sysctl.conf
+	echo "net.ipv4.tcp_congestion_control=BBR-ACW" >> /etc/sysctl.conf
 	sysctl -p
     cd .. && rm -rf bbrmod
 	echo -e "${Info}BBR-ACW启动成功！"
