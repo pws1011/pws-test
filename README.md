@@ -15,9 +15,9 @@ The simulation logic corresponds directly to the mathematical models in the pape
 | Feature | Paper Section | Code Location |
 | :--- | :--- | :--- |
 | **Trust Calculation** | Sec 3.1 (Eq 13) | `TrustManager.calculate_fahp_score` |
-| **Decay Function** | Sec 3.1.3 (Eq 15) | `TrustManager.update` (Time decay logic) |
-| **Recovery Window** | Sec 3.1.3 (Eq 16) | `TrustManager.update` (Compliance sum) |
-| **Probation Penalty** | Sec 3.1.3 (Eq 17) | `TrustManager.update` (Probation logic) |
+| **Decay Function** | Sec 3.1 (Eq 15) | `TrustManager.update` (Time decay logic) |
+| **Recovery Window** | Sec 3.1 (Eq 16) | `TrustManager.update` (Compliance sum) |
+| **Probation Penalty** | Sec 3.1 (Eq 17) | `TrustManager.update` (Probation logic) |
 | **Route Pruning** | Sec 3.2 | `NetworkEnvironment.find_trusted_path` |
 
 ##  How to Run
