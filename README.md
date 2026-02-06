@@ -1,0 +1,1 @@
+In this experiment, a multi-controller SDN simulation environment integrated with the Hyperledger Fabric blockchain was constructed. All experiments were run on a cluster of 5 physical servers with identical configurations (Ubuntu 18.04.5 LTS) to support large-scale network simulation.
