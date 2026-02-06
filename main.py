@@ -40,25 +40,18 @@ def main():
     plt.legend()
     plt.grid(True)
     
-    # 路由计算时延
-    plt.subplot(1, 3, 2)
-    plt.plot(history['time'], color='orange')
-    plt.title('Route Calculation Latency')
-    plt.xlabel('Round')
-    plt.ylabel('Time (ms)')
-    plt.grid(True)
-    
-    # 安全漏洞统计
-    plt.subplot(1, 3, 3)
-    plt.plot(history['breaches'], color='red', marker='o')
-    plt.title('Security Breaches (Route Compromise)')
-    plt.xlabel('Round')
-    plt.ylabel('Count')
-    plt.grid(True)
-    
-    plt.tight_layout()
-    plt.savefig('btr_sdn_results.png')
-    print("\nSimulation Finished. Results saved to 'btr_sdn_results.png'.")
+   print("Simulation started...")
+    for r in range(Config.SIMULATION_ROUNDS):
+        result = env.step(r)
+        simulation_history.append(result)
+        if r % 10 == 0:
+            print(f"Round {r} completed...")
+
+    # 执行导出
+    exporter = ResultExporter()
+    exporter.export_to_csv("simulation_results.csv", simulation_history)
+    exporter.export_summary_report("final_report.txt", simulation_history, env.malicious_targets)
 
 if __name__ == "__main__":
+
     main()
